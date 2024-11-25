@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useEffect, useState } from "react"; 
 import Layout from "./layout";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
@@ -8,13 +8,26 @@ import Movies from "./pages/Movies";
 import News from "./pages/News";
 import Genre from "./pages/Genre";
 import Explore from "./pages/Explore";
+import axios from "axios";
 
 function App() { 
 
+  // const fetchTrendingData = async () => {
+  //   try {
+  //     const response = await axios.get("/trending/all/week")
+
+  //   } catch (error) {
+      
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   fetchTrendingData()
+  // }, [fetchTrendingData])
+
   return (
     <>
-      <Header />
-      <Layout>
+      <Header /> 
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/explore" element={<Explore />} />
@@ -23,7 +36,7 @@ function App() {
           <Route exact path="/movies" element={<Movies />} />
           <Route exact path="/tv-show" element={<TVShows />} />
         </Routes>
-      </Layout>
+       
     </>
   );
 }

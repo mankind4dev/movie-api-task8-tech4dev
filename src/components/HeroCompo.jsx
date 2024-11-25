@@ -4,39 +4,39 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-interface Movie {
-  Title: string;
-  Year: string;
-  imdbID: string;
-  Type: string;
-  Poster: string;
-}
+// interface Movie {
+//   Title: string;
+//   Year: string;
+//   imdbID: string;
+//   Type: string;
+//   Poster: string;
+// }
 
 const HeroCompo = () => {
-  const [data, setData] = useState<Movie[]>([]);
-  const fetchMovies = async () => {
-    const url =
-      "https://movie-database-alternative.p.rapidapi.com/?s=Avengers%20Endgame&r=json&page=1";
-    const options = {
-      method: "GET",
-      headers: {
-        "x-rapidapi-key": "c5b69ce011msh12e0ed9933cd648p1d7167jsn384c6952569f",
-        "x-rapidapi-host": "movie-database-alternative.p.rapidapi.com",
-      },
-    };
+  const [data, setData] = useState([]);
+  // const fetchMovies = async () => {
+  //   const url =
+  //     "https://movie-database-alternative.p.rapidapi.com/?s=Avengers%20Endgame&r=json&page=1";
+  //   const options = {
+  //     method: "GET",
+  //     headers: {
+  //       "x-rapidapi-key": "c5b69ce011msh12e0ed9933cd648p1d7167jsn384c6952569f",
+  //       "x-rapidapi-host": "movie-database-alternative.p.rapidapi.com",
+  //     },
+  //   };
 
-    try {
-      const response = await fetch(url, options);
-      const result = await response.text();
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  //   try {
+  //     const response = await fetch(url, options);
+  //     const result = await response.text();
+  //     console.log(result);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchMovies();
-  }, []);
+  // useEffect(() => {
+  //   fetchMovies();
+  // }, []);
   return (
     <>
       <Box
@@ -45,7 +45,8 @@ const HeroCompo = () => {
         height={{ lg: "900px", bs: "900px" }}
         flexDirection={{ lg: "row", md: "column", sm: "column", bs: "column" }}
         px={5}
-        // flexGrow={1}
+        flexGrow={1}
+        position={"relative"}
       >
         <Box
           display={"flex"}
@@ -76,7 +77,9 @@ const HeroCompo = () => {
             Watch Tutorial
           </button>
         </Box>
-        <Box display={"flex"} flex={1} width={"100%"}>
+        <Box display={"flex"} 
+        flex={1} 
+        width={"100%"}>
           <Box className="heroImg">
             <img src="/images/spiderMan.png" alt="spiderMan" />
             <img src="/images/gurdians.png" alt="gurdians" />

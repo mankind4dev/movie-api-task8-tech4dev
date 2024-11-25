@@ -3,6 +3,8 @@ import React from "react";
 import NavCompo from "./NavCompo";
 import { FaHamburger } from "react-icons/fa";
 
+
+
 const Header = () => {
   return (
     <>
@@ -30,16 +32,11 @@ const Header = () => {
           </Box>
 
           <Box display={"flex"} alignItems={"center"}>
-            <NavCompo name="Home" link="/" isActive={true} />
-            <NavCompo name="Explore " link="/explore " isActive={true} />
-            <NavCompo name="Genre " link="/genre " isActive={true} />
-            <NavCompo name="News " link="/news " isActive={true} />
-            <NavCompo name="Movies " link="/movies " isActive={true} />
-            <NavCompo name="TV Shows " link="/tv-hows " isActive={true} />
+            <NavCompo /> 
           </Box>
-          <Box display={{ lg: "none", bs: "block" }} ml={"auto"}>
+          {/* <Box display={{ lg: "none", bs: "block" }} ml={"auto"}>
             <FaHamburger />
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </>
