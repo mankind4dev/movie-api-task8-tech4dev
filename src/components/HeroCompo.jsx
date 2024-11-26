@@ -13,7 +13,7 @@ import { useEffect } from "react";
 // }
 
 const HeroCompo = () => {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState<Movie[]>([]);
   // const fetchMovies = async () => {
   //   const url =
   //     "https://movie-database-alternative.p.rapidapi.com/?s=Avengers%20Endgame&r=json&page=1";
@@ -27,7 +27,7 @@ const HeroCompo = () => {
 
   //   try {
   //     const response = await fetch(url, options);
-  //     const result = await response.text();
+  //     const result = await response.json();
   //     console.log(result);
   //   } catch (error) {
   //     console.error(error);
